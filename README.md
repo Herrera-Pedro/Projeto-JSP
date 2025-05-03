@@ -1,5 +1,5 @@
-# Deploy do Projeto (localhost)
-Um guia passo-a-passo para a instalação das ferramentas necessárias e resolução de possíveis problemas ao iniciar um projeto do tipo "webapp" pelo NetBeans
+# Guia de Implementação (localhost)
+Um guia passo-a-passo para a instalação das ferramentas necessárias e resolução de possíveis problemas ao iniciar um projeto do tipo "webapp" pelo Apache NetBeans, utilizando o servidor Apache Tomcat
 
 ## Instalação do Apache NetBeans
 

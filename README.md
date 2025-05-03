@@ -15,4 +15,4 @@ Após a instalação, a IDE deverá abrir normalmente.
 
 Para instalar o Apache Tomcat, basta utilizar o link (https://tomcat.apache.org/download-11.cgi) e baixá-lo como serviço, acessando a área "Binary Distributions" e após "Core" e "Windows Service Installer" conforme a imagem abaixo:
 
-<img src="/assets/img/tomcat-download1">
+<img src="Assets/img/image1.png">

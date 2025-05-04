@@ -13,6 +13,20 @@ Após a instalação, a IDE deverá abrir normalmente.
 
 ## Instalação do Apache Tomcat
 
-Para instalar o Apache Tomcat, basta utilizar o link (https://tomcat.apache.org/download-11.cgi) e baixá-lo como serviço, acessando a área "Binary Distributions", "Core" e "Windows Service Installer" conforme a imagem abaixo:
+Para instalar o Apache Tomcat, basta utilizar o link (https://tomcat.apache.org/download-11.cgi) e baixá-lo como serviço, acessando a área "Binary Distributions", "Core" e "Windows Service Installer" conforme a imagem abaixo:  
 
-<img src="Assets/img/image1.png">
+<img src="Assets/img/image1.png">  
+
+Após ter sido concluído o download do arquivo, basta seguir o fluxo padrão de instalação do Tomcat:  
+
+<img src="Assets/img/image2.png">
+<img src="Assets/img/image3.png">
+<img src="Assets/img/image4.png">  
+
+É importante certificar-se de que, na etapa seguinte, você adicione o papel "manager-script" aos papéis do administrador (ou roles, em inglês), além de escolher um nome e senha para utilizarmos posteriormente. Dessa forma o Apache NetBeans terá o acesso necessário para rodar a aplicação web no localhost.  
+
+<img src="Assets/img/image5.png">
+<img src="Assets/img/image6.png">
+<img src="Assets/img/image7.png">  
+
+## Instalação do Apache NetBeans

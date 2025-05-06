@@ -47,7 +47,7 @@ Ao fim desse processo, uma estrutura de diretórios como a mostrada a seguir ser
 
 <img src="Assets/img/image20.png">
 
-Basta, então, que você execute o projeto para que ele seja compilado e comece a rodar no localhost (localhost:8080\).
+Basta, então, que você execute o projeto para que ele seja compilado e comece a rodar no localhost (localhost:8080/NomeDoProjeto).
 
 <img src="Assets/img/image21.png">
 
@@ -70,14 +70,10 @@ Após essa alteração, basta fechar a janela de seleção do diretório do serv
 
 <img src="Assets/img/image17.png">
 
-### Plugin do Maven Desatualizado (pom.xml)
-
-
-
 ### Deploy com o Servidor em Funcionamento
 
 Caso o servidor Tomcat esteja em funcionamento ao tentar dar deploy no projeto, é provável que receba a mensagem de erro "FALHA - Incapaz de criar o diretório [C:\Program Files\Apache Software Foundation\Tomcat 11.0\conf\Catalina\localhost]".  
-Se isso acontecer, uma solução simples é parar a execução do servidor e rodar o webapp diretamente da IDE, sem antes iniciar o servidor.
+Se isso acontecer, uma possível solução é parar a execução do servidor e rodar o webapp diretamente da IDE, sem antes iniciar o servidor.
 
 <img src="Assets/img/image23.png">
 <img src="Assets/img/image21.png">

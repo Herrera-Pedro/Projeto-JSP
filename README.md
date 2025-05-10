@@ -72,7 +72,7 @@ Após essa alteração, basta fechar a janela de seleção do diretório do serv
 
 ### Deploy com o Servidor em Funcionamento
 
-Caso o servidor Tomcat esteja em funcionamento ao tentar dar deploy no projeto, é provável que receba a mensagem de erro "FALHA - Incapaz de criar o diretório [C:\Program Files\Apache Software Foundation\Tomcat 11.0\conf\Catalina\localhost]".  
+Caso o servidor Tomcat esteja em funcionamento ao tentar dar deploy no projeto, é provável que receba uma mensagem de erro.  
 Se isso acontecer, uma possível solução é parar a execução do servidor e rodar o webapp diretamente da IDE, sem antes iniciar o servidor.
 
 ![Image](https://github.com/user-attachments/assets/1bef3ab0-6e3e-4501-a90c-c3a189f50243)  

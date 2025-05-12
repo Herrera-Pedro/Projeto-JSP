@@ -18,11 +18,11 @@ import jakarta.servlet.http.HttpServletResponse;
  * @author User
  */
 @WebServlet(urlPatterns = {"/controllerServlet"})
-public class controllerServlet extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
+     * methodsg
      *
      * @param request servlet request
      * @param response servlet response
@@ -85,4 +85,37 @@ public class controllerServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
+}
+
+package controller;
+
+import java.io.IOException;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet para login básico
+ */
+@WebServlet(urlPatterns = {"/login"})
+public class LoginServlet extends HttpServlet {
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // Obtém os parâmetros do formulário de login
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        // Validação simples de credenciais (substitua por lógica real)
+        if ("admin".equals(username) && "1234".equals(password)) {
+            // Redireciona para a página de sucesso
+            response.sendRedirect("success.jsp");
+        } else {
+            // Redireciona para a página de erro
+            response.sendRedirect("error.jsp");
+        }
+    }
 }

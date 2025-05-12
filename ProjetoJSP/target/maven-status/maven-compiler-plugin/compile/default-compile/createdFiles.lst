@@ -1,5 +1,0 @@
-resources\JakartaEE11Resource.class
-JakartaRestConfiguration.class
-model\Pizza.class
-controller\controllerServlet.class
-model\Cliente.class

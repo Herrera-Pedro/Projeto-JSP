@@ -14,5 +14,6 @@
         <br>
         <button type="submit">Entrar</button>
     </form>
+    <p>Usuário ou senha inválidos.</p>
 </body>
 </html>

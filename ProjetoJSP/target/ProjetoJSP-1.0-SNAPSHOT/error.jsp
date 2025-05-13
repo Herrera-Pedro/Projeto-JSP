@@ -1,18 +1,19 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Erro</title>
-    <script type="text/javascript">
-        function forwardPage() {
-            window.location.href = "login.jsp";
-        }
-
-        // Set a timer to forward the page after 5 seconds (5000 milliseconds)
-        setTimeout(forwardPage, 2000);
-    </script>
+    <title>Login</title>
 </head>
 <body>
-    <h1>Usu√°rio ou senha inv√°lidos.</h1>
-    <p>Redirecionando para a p√°gina de login...</p>
+    <h2>Login</h2>
+    <form action="login" method="post">
+        <label for="username">Usu·rio:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Entrar</button>
+    </form>
+    <p>Usu·rio ou senha inv·lidos.</p>
 </body>
 </html>

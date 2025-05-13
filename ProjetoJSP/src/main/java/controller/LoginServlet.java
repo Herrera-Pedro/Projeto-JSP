@@ -17,9 +17,27 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author User
  */
-@WebServlet(urlPatterns = {"/controllerServlet"})
+
+@WebServlet(urlPatterns = {"/login"})
 public class LoginServlet extends HttpServlet {
 
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // Obtém os parâmetros do formulário de login
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        // Validação simples de credenciais (substitua por lógica real)
+        if ("admin".equals(username) && "1234".equals(password)) {
+            // Redireciona para a página de sucesso
+            response.sendRedirect("success.jsp");
+        } else {
+            // Redireciona para a página de erro
+            response.sendRedirect("error.jsp");
+        }
+    }
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methodsg
@@ -45,7 +63,7 @@ public class LoginServlet extends HttpServlet {
             out.println("</html>");
         }
     }
-
+    
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -69,11 +87,6 @@ public class LoginServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
 
     /**
      * Returns a short description of the servlet.
@@ -84,38 +97,5 @@ public class LoginServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
-}
-
-package controller;
-
-import java.io.IOException;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-
-/**
- * Servlet para login básico
- */
-@WebServlet(urlPatterns = {"/login"})
-public class LoginServlet extends HttpServlet {
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        // Obtém os parâmetros do formulário de login
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-
-        // Validação simples de credenciais (substitua por lógica real)
-        if ("admin".equals(username) && "1234".equals(password)) {
-            // Redireciona para a página de sucesso
-            response.sendRedirect("success.jsp");
-        } else {
-            // Redireciona para a página de erro
-            response.sendRedirect("error.jsp");
-        }
-    }
+    
 }

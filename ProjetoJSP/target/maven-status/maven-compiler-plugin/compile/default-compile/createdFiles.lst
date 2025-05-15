@@ -1,5 +1,7 @@
 resources\JakartaEE11Resource.class
 controller\LoginServlet.class
-JakartaRestConfiguration.class
 model\Pizza.class
+config\JakartaRestConfiguration.class
+controller\CarrinhoServlet.class
+controller\LogoutServlet.class
 model\Cliente.class

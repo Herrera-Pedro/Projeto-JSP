@@ -1,3 +1,11 @@
+<%
+    HttpSession session = request.getSession(false); // false: não cria nova sessão se não existir
+    if (session == null || session.getAttribute("usuarioLogado") == null) {
+        response.sendRedirect("login.jsp");
+        return;
+    }
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +22,5 @@
         <br>
         <button type="submit">Entrar</button>
     </form>
-    <p>Usuário ou senha inválidos.</p>
 </body>
 </html>

@@ -12,6 +12,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 /**
  *
@@ -32,6 +33,8 @@ public class LoginServlet extends HttpServlet {
         if ("admin".equals(username) && "1234".equals(password)) {
             // Redireciona para a página de sucesso
             response.sendRedirect("success.jsp");
+            HttpSession session = request.getSession();
+            session.setAttribute("usuarioLogado", usuario);
         } else {
             // Redireciona para a página de erro
             response.sendRedirect("error.jsp");

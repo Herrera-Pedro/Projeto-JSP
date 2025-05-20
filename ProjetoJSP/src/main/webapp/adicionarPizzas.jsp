@@ -11,7 +11,7 @@
         }
     }
     List<Pizza> pizzas = Arrays.asList(
-        new Pizza("Margherita", 25.0),
+        new Pizza("Mussarela", 25.0),
         new Pizza("Calabresa", 28.0),
         new Pizza("Quatro Queijos", 30.0)
     );

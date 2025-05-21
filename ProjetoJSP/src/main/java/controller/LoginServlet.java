@@ -30,13 +30,14 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
 
         // Validação simples de credenciais (substitua por lógica real)
-        if ("admin".equals(username) && "1234".equals(password)) {
-            // Redireciona para a página de sucesso
-            response.sendRedirect("success.jsp");
+        ClienteDAO clienteDAO = new ClienteDAO();
+        Cliente usuario = clienteDAO.validarLogin(username, password);
+
+        if (usuario != null) {
             HttpSession session = request.getSession();
             session.setAttribute("usuarioLogado", usuario);
+            response.sendRedirect("success.jsp");
         } else {
-            // Redireciona para a página de erro
             response.sendRedirect("error.jsp");
         }
     }

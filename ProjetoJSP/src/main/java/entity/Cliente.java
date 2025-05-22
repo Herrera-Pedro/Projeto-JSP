@@ -11,7 +11,9 @@ public class Cliente {
     private String nome;
     private String email;
     private String senha;
-
+    
+    // Getters e Setters
+    
     public int getId() {
         return id;
     }
@@ -43,8 +45,6 @@ public class Cliente {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-
-    // Getters e Setters
 
     public static Cliente getById(int id) {
         Cliente cliente = null;

@@ -2,6 +2,12 @@ C:\Users\AULA\Documents\GitHub\Projeto-JSP\ProjetoJSP\src\main\java\config\Jakar
 C:\Users\AULA\Documents\GitHub\Projeto-JSP\ProjetoJSP\src\main\java\controller\CarrinhoServlet.java
 C:\Users\AULA\Documents\GitHub\Projeto-JSP\ProjetoJSP\src\main\java\controller\LoginServlet.java
 C:\Users\AULA\Documents\GitHub\Projeto-JSP\ProjetoJSP\src\main\java\controller\LogoutServlet.java
-C:\Users\AULA\Documents\GitHub\Projeto-JSP\ProjetoJSP\src\main\java\model\Cliente.java
-C:\Users\AULA\Documents\GitHub\Projeto-JSP\ProjetoJSP\src\main\java\model\Pizza.java
+C:\Users\AULA\Documents\GitHub\Projeto-JSP\ProjetoJSP\src\main\java\controller\RegisterServlet.java
+C:\Users\AULA\Documents\GitHub\Projeto-JSP\ProjetoJSP\src\main\java\DAO\ClienteDAO.java
+C:\Users\AULA\Documents\GitHub\Projeto-JSP\ProjetoJSP\src\main\java\DAO\PedidoDAO.java
+C:\Users\AULA\Documents\GitHub\Projeto-JSP\ProjetoJSP\src\main\java\DAO\PizzaDAO.java
+C:\Users\AULA\Documents\GitHub\Projeto-JSP\ProjetoJSP\src\main\java\entity\Cliente.java
+C:\Users\AULA\Documents\GitHub\Projeto-JSP\ProjetoJSP\src\main\java\entity\Pedido.java
+C:\Users\AULA\Documents\GitHub\Projeto-JSP\ProjetoJSP\src\main\java\entity\Pizza.java
 C:\Users\AULA\Documents\GitHub\Projeto-JSP\ProjetoJSP\src\main\java\resources\JakartaEE11Resource.java
+C:\Users\AULA\Documents\GitHub\Projeto-JSP\ProjetoJSP\src\main\java\util\DBConnectionUtil.java

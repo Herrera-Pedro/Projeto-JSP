@@ -1,7 +1,13 @@
 resources\JakartaEE11Resource.class
+util\DBConnectionUtil.class
 controller\LoginServlet.class
-model\Pizza.class
+DAO\PizzaDAO.class
+entity\Cliente.class
+entity\Pedido.class
+DAO\PedidoDAO.class
 config\JakartaRestConfiguration.class
+entity\Pizza.class
 controller\CarrinhoServlet.class
 controller\LogoutServlet.class
-model\Cliente.class
+controller\RegisterServlet.class
+DAO\ClienteDAO.class

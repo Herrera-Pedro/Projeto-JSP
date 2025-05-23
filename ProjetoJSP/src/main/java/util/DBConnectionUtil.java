@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class DBConnectionUtil {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/employeedirectory?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+    private static final String URL = "";
 
-    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
+    private static final String DRIVER = "com.mysql.mysql-connector-j";
 
     // Never commit a real username or dont write as String
     private static final String USERNAME = "[YOUR USER HERE]";

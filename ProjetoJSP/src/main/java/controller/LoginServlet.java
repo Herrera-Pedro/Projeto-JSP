@@ -15,18 +15,18 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Obtém os parâmetros do formulário de login
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        /**
-        if (usuario != null) {
+        String email = request.getParameter("email"); // O campo do form é "username"
+        String senha = request.getParameter("password");
+    
+        entity.Cliente cliente = new DAO.ClienteDAO().buscarPorEmailSenha(email, senha);
+    
+        if (cliente != null) {
             HttpSession session = request.getSession();
-            session.setAttribute("usuarioLogado", usuario);
+            session.setAttribute("cliente", cliente);
             response.sendRedirect("success.jsp");
         } else {
-            response.sendRedirect("error.jsp");
+            request.getRequestDispatcher("error.jsp").forward(request, response);
         }
-        **/
     }
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)

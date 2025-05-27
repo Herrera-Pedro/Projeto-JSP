@@ -6,7 +6,7 @@
 <body>
     <h2>Login</h2>
     <form action="login" method="post">
-        <label for="username">Usuário:</label>
+        <label for="username">Email:</label>
         <input type="text" id="username" name="username" required>
         <br>
         <label for="password">Senha:</label>

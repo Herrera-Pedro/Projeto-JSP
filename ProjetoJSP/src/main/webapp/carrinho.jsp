@@ -1,4 +1,3 @@
-<!-- filepath: c:\Users\caio\Documents\GitHub\Projeto-JSP\ProjetoJSP\src\main\webapp\carrinho.jsp -->
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!-- Define o tipo de conteúdo da página como HTML com codificação UTF-8 e linguagem Java -->
 

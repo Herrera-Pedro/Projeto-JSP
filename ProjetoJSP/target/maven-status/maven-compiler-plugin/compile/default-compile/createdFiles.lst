@@ -1,6 +1,6 @@
 resources\JakartaEE11Resource.class
-util\DBConnectionUtil.class
 controller\LoginServlet.class
+util\ConnectionFactory.class
 DAO\PizzaDAO.class
 entity\Cliente.class
 entity\Pedido.class

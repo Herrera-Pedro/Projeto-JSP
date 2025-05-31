@@ -2,7 +2,7 @@ package DAO;
 
 import entity.Pedido;
 import entity.Pizza;
-import util.DBConnectionUtil;
+import util.ConnectionFactory;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ public class PedidoDAO {
 
     public boolean inserir(Pedido pedido) {
         String sql = "INSERT INTO pedidos (cliente_id, total, status) VALUES (?, ?, ?)"; // Altere conforme seu banco
-        try (Connection conn = DBConnectionUtil.openConnection();
+        try (Connection conn = ConnectionFactory.openConnection();
              PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
             stmt.setInt(1, pedido.getClienteId());
@@ -50,7 +50,7 @@ public class PedidoDAO {
         List<Pedido> pedidos = new ArrayList<>();
         String sql = "SELECT * FROM pedidos"; // Altere conforme seu banco
 
-        try (Connection conn = DBConnectionUtil.openConnection();
+        try (Connection conn = ConnectionFactory.openConnection();
              PreparedStatement stmt = conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
 

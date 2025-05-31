@@ -1,6 +1,6 @@
 package entity;
 
-import util.DBConnectionUtil;
+import util.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -51,7 +51,7 @@ public class Cliente {
 
         String sql = "SELECT * FROM users WHERE id = ?";
 
-        try (Connection conn = DBConnectionUtil.openConnection();
+        try (Connection conn = ConnectionFactory.openConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setInt(1, id);

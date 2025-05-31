@@ -1,7 +1,7 @@
 package DAO;
 
 import entity.Cliente;
-import util.DBConnectionUtil;
+import util.ConnectionFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,7 +15,7 @@ public class ClienteDAO {
         Cliente cliente = null;
         String sql = "SELECT * FROM users WHERE email = ? AND senha = ?"; // Altere o nome da tabela/colunas conforme seu banco
 
-        try (Connection conn = DBConnectionUtil.openConnection();
+        try (Connection conn = ConnectionFactory.openConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, email);
@@ -37,20 +37,35 @@ public class ClienteDAO {
 
     // Insere novo cliente
     public boolean inserir(Cliente cliente) {
-        String sql = "INSERT INTO users (nome, email, senha) VALUES (?, ?, ?)"; // Altere conforme seu banco
-        try (Connection conn = DBConnectionUtil.openConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-
+        String sql = "INSERT INTO users (nome, email, senha) VALUES (?, ?, ?)";
+        
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        
+        try {
+            conn = ConnectionFactory.openConnection();
+            stmt = conn.prepareStatement(sql);
+                    
             stmt.setString(1, cliente.getNome());
             stmt.setString(2, cliente.getEmail());
             stmt.setString(3, cliente.getSenha());
-            int rows = stmt.executeUpdate();
-            return rows > 0;
+            
+            stmt.execute();
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            
+            try {
+                if (stmt != null){
+                    stmt.close();
+                }
+                if (conn != null){
+                    conn.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
-        return false;
+        return true;
     }
-
-    // Outros métodos como atualizar, deletar, buscar por id podem ser adicionados conforme necessidade
 }

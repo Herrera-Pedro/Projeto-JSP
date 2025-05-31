@@ -1,7 +1,7 @@
 package DAO;
 
 import entity.Pizza;
-import util.DBConnectionUtil;
+import util.ConnectionFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -17,7 +17,7 @@ public class PizzaDAO {
         List<Pizza> pizzas = new ArrayList<>();
         String sql = "SELECT * FROM pizzas"; // Altere o nome da tabela/colunas conforme seu banco
 
-        try (Connection conn = DBConnectionUtil.openConnection();
+        try (Connection conn = ConnectionFactory.openConnection();
              PreparedStatement stmt = conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
 
@@ -38,7 +38,7 @@ public class PizzaDAO {
     // Insere uma nova pizza
     public boolean inserir(Pizza pizza) {
         String sql = "INSERT INTO pizzas (nome, preco) VALUES (?, ?)"; // Altere conforme seu banco
-        try (Connection conn = DBConnectionUtil.openConnection();
+        try (Connection conn = ConnectionFactory.openConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             // stmt.setString(1, pizza.getNome());

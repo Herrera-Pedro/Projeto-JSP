@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Sucesso</title>
-    <meta http-equiv="refresh" content="3;url=index.html">
+    <meta http-equiv="refresh" content="3;url=index.jsp">
 </head>
 <body>
     <h1>Login realizado com sucesso!</h1>

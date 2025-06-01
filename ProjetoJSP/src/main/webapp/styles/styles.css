@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap');
+
+.ancizar-serif {
+  font-family: "Ancizar Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Ancizar Serif", serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(images/ivan-torres-MQUqbmszGGM-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 48px;
+  margin-top: 20px;
+}
+
+p {
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+/* edita o estilo da lista */
+ul {
+  text-align: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0px;
+}
+
+/* edita o estilo dos itens da lista */
+li {
+  display: inline-block;
+}
+
+/* edita o estilo dos links da barra de navegação */
+li a {
+  font-size: 30px;
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 24px 32px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* altera o estilo dos links quando o mouse passa por cima */
+li a:hover {
+  background-color: #11111149;
+}
+
+/* altera o estilo do link ativo */
+.active {
+  background-color: #FFD83D;
+  color: black;
+}
+
+.active:hover {
+    color: white;
+}
+
+ul.social-links{
+  text-align: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0px;
+}
+
+li.whatsapp {
+  color: white;
+}
+
+li.facebook {
+  color: white;
+}
+
+li.instagram {
+  color: white;
+}
+
+img.icons{
+  width: 20px;
+  height: 20px;
+}
+
+a.icon-div {
+  height: 30px;
+  width: 30px;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+}	

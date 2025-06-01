@@ -17,8 +17,6 @@ public class ConnectionFactory {
 
     // Never commit a real password or dont write as String
     private static final String PASSWORD = "Root";
-
-    private static Connection connection;
     
     public static Connection openConnection() {
         try {

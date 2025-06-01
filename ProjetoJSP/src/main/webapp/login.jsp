@@ -1,11 +1,19 @@
+<%@page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <title>Login</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/login.css"/>
 </head>
 <body>
-    <h2>Login</h2>
-    <form action="login" method="post">
+    <ul>
+        <li><a href="index.jsp">Início</a></li>
+        <li><a href="cardapio.jsp">Cardápio</a></li>
+        <li><a class="active" href="">Entrar</a></li>
+    </ul>   
+    <form action="login" method="post" class="login-form">
         <label for="email">E-mail:</label>
         <input type="text" id="email" name="email" required>
         <br>
@@ -14,6 +22,7 @@
         <br>
         <button type="submit">Entrar</button>
     </form>
-    <a href="register.jsp">Criar nova conta</a>
+    <a href="cadastro.jsp">Cadastre-se</a>
+    <a href="index.jsp">Início</a>
 </body>
 </html>

@@ -6,7 +6,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Início</title>
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/styles.css"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/login.css"/>
     </head>
     <%
         Cliente cliente = (Cliente) session.getAttribute("cliente");

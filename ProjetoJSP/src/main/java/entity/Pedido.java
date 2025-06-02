@@ -44,5 +44,38 @@ public class Pedido {
         this.status = status;
     }
 
+    // Getters e setters compatíveis com PedidoDAO
+    public int getUserId() {
+        return clienteId;
+    }
+    public void setUserId(int userId) {
+        this.clienteId = userId;
+    }
+
+    private int pepperoni;
+    private int rucula;
+    private int chocolate;
+
+    public int getPepperoni() {
+        return pepperoni;
+    }
+    public void setPepperoni(int pepperoni) {
+        this.pepperoni = pepperoni;
+    }
+
+    public int getRucula() {
+        return rucula;
+    }
+    public void setRucula(int rucula) {
+        this.rucula = rucula;
+    }
+
+    public int getChocolate() {
+        return chocolate;
+    }
+    public void setChocolate(int chocolate) {
+        this.chocolate = chocolate;
+    }
+
     // Altere os campos conforme o banco de dados real, se necessário
 }

@@ -96,11 +96,6 @@ li a:hover {
     color: white;
 }
 
-img{
-    width: 100%;
-    display: block;
-}
-
 .container{
     width: 88vw;
     margin-top: 100px;
@@ -379,4 +374,33 @@ img{
   margin-top: 1rem;
   font-size: 0.9rem;
   color: #777;
+}
+
+ul.social-links{
+  text-align: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0px;
+}
+
+img.icons{
+  width: 20px;
+  height: 20px;
+}
+
+li.instagram {
+  color: white;
+}
+
+li.whatsapp {
+  color: white;
+}
+
+li.facebook {
+  color: white;
 }

@@ -10,7 +10,7 @@ public class ConnectionFactory {
     
     private static final Logger LOGGER = Logger.getLogger(ConnectionFactory.class.getName());
     
-    private static final String URL = "jdbc:mysql://localhost:3300/testDB";
+    private static final String URL = "jdbc:mysql://localhost:3306/testDB";
 
     // Never commit a real username or dont write as String
     private static final String USERNAME = "root";

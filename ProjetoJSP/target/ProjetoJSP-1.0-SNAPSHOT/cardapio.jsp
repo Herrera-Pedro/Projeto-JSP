@@ -32,63 +32,69 @@
     <div class="products">
         <div class="container">
             <div class="product-items">
-                <!-- single product -->
-                <div class = "product">
-                    <div class = "product-content">
-                        <div class = "product-img">
-                            <img src = "${pageContext.request.contextPath}/styles/images/alan-hardman-SU1LFoeEUkk-unsplash.jpg" alt = "Imagem do Produto">
+                <!-- Produto Pepperoni -->
+                <div class="product">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="${pageContext.request.contextPath}/styles/images/alan-hardman-SU1LFoeEUkk-unsplash.jpg" alt="Imagem do Produto">
                         </div>
                     </div>
-                    <div class = "product-info">
-                        <div class = "product-info-top">
-                        <a href = "#" class = "product-name">Pepperoni</a>                            
-                            <button type = "button" class = "btn-cart"> + Carrinho
-                            </button>
-                            <button type = "button" class = "btn-buy"> Comprar
-                            </button>
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <a href="#" class="product-name">Pepperoni</a>
+                            <form action="PedidoServlet" method="post" style="display:inline;">
+                                <input type="hidden" name="user_id" value="<%= cliente != null ? cliente.getId() : 0 %>"/>
+                                <input type="hidden" name="pepperoni" value="1"/>
+                                <input type="hidden" name="rucula" value="0"/>
+                                <input type="hidden" name="chocolate" value="0"/>
+                                <button type="submit" class="btn-buy">Comprar</button>
+                            </form>
                         </div>
-                        <p class = "product-price">R$ 32,00</p>
-                    </div>
-                </div>
-                <!-- end of single product -->
-                <!-- single product -->
-                <div class = "product">
-                    <div class = "product-content">
-                        <div class = "product-img">
-                            <img src = "${pageContext.request.contextPath}/styles/images/saundarya-srinivasan-60nzTP7_hMQ-unsplash(redimensionado).jpg" alt = "Imagem do Produto">
-                        </div>
-                    </div>
-                    <div class = "product-info">
-                        <div class = "product-info-top">
-                        <a href = "#" class = "product-name">Rúcula c/ Queijo</a>                            
-                            <button type = "button" class = "btn-cart"> + Carrinho
-                            </button>
-                            <button type = "button" class = "btn-buy"> Comprar
-                            </button>
-                        </div>
-                        <p class = "product-price">R$ 38,00</p>
+                        <p class="product-price">R$ 32,00</p>
                     </div>
                 </div>
-                <!-- end of single product -->
-                <!-- single product -->
-                <div class = "product">
-                    <div class = "product-content">
-                        <div class = "product-img">
-                            <img src = "${pageContext.request.contextPath}/styles/images/aldward-castillo-NEr4vXqKayY-unsplash.jpg" alt = "Imagem do Produto">
+                <!-- Produto Rúcula -->
+                <div class="product">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="${pageContext.request.contextPath}/styles/images/saundarya-srinivasan-60nzTP7_hMQ-unsplash(redimensionado).jpg" alt="Imagem do Produto">
                         </div>
                     </div>
-                    <div class = "product-info">
-                        <div class = "product-info-top">
-                        <a href = "#" class = "product-name">Chocolate</a>                            
-                            <button type = "button" class = "btn-cart"> + Carrinho
-                            </button>
-                            <button type = "button" class = "btn-buy"> Comprar
-                            </button>
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <a href="#" class="product-name">Rúcula c/ Queijo</a>
+                            <form action="PedidoServlet" method="post" style="display:inline;">
+                                <input type="hidden" name="user_id" value="<%= cliente != null ? cliente.getId() : 0 %>"/>
+                                <input type="hidden" name="pepperoni" value="0"/>
+                                <input type="hidden" name="rucula" value="1"/>
+                                <input type="hidden" name="chocolate" value="0"/>
+                                <button type="submit" class="btn-buy">Comprar</button>
+                            </form>
                         </div>
-                        <p class = "product-price">R$ 32,00</p>
+                        <p class="product-price">R$ 38,00</p>
                     </div>
                 </div>
-                <!-- end of single product -->
+                <!-- Produto Chocolate -->
+                <div class="product">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="${pageContext.request.contextPath}/styles/images/aldward-castillo-NEr4vXqKayY-unsplash.jpg" alt="Imagem do Produto">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <a href="#" class="product-name">Chocolate</a>
+                            <form action="PedidoServlet" method="post" style="display:inline;">
+                                <input type="hidden" name="user_id" value="<%= cliente != null ? cliente.getId() : 0 %>"/>
+                                <input type="hidden" name="pepperoni" value="0"/>
+                                <input type="hidden" name="rucula" value="0"/>
+                                <input type="hidden" name="chocolate" value="1"/>
+                                <button type="submit" class="btn-buy">Comprar</button>
+                            </form>
+                        </div>
+                        <p class="product-price">R$ 32,00</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

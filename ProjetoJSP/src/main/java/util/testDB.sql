@@ -11,13 +11,9 @@ CREATE TABLE users (
 
 CREATE TABLE pedidos (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    cliente_id INT NOT NULL,
-    total DECIMAL(10,2) NOT NULL,
-    status VARCHAR(50) NOT NULL
-);
-
-CREATE TABLE pizzas (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    preco DECIMAL(10,2) NOT NULL
+    user_id INT NOT NULL,
+    pepperoni INT DEFAULT 0,
+    rucula INT DEFAULT 0,
+    chocolate INT DEFAULT 0,
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
